@@ -1,1 +1,215 @@
 /* CSS declarations go here */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Reset.css - готовая библиотека которая сбрасывает стандартное отображение тэгов. Это наш помошник. */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Конец Reset.css */
+
+
+
+
+
+/*****************************************************
+*** Зададим общие стили всему документу ***
+*****************************************************/
+
+body {
+    /* Устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого. */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* Определяет размер шрифта элемента. */
+    font-size: 14px;
+    /* Определяет цвет текста элемента. */
+    color: #333;
+    /* Определяет цвет фона элемента. */
+    background-color: #fff;
+}
+
+/**************************************************************
+*** Зададим нашему первому блоку header где находиться меню ***
+***************************************************************/
+
+.header {
+    /* станавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице. */
+    position: absolute; /* absolute - Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет. */
+
+    /* Для позиционированного элемента определяет расстояние от левого края родительского элемента, не включая отступ, поле и ширину рамки, до левого края дочернего элемента. */
+    left: 0;
+    /* Для позиционированного элемента определяет расстояние от верхнего края родительского элемента до верхнего края дочернего элемента. */
+    top: 0;
+    /* Устанавливает ширину блочных или заменяемых элементов */
+    width: 100%;
+    /* Устанавливает значение полей вокруг содержимого элемента. */
+    padding: 20px 0;
+    font-size: 16px;
+    /* Любые позиционированные элементы на веб-странице могут накладываться друг на друга в определенном порядке, имитируя тем самым третье измерение, перпендикулярное экрану. */
+    z-index: 1;
+    background-color: white;
+}
+.container {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin - Устанавливает величину отступа от каждого края элемента. */
+    margin-right: auto; /* auto - Указывает, что размер отступов будет автоматически рассчитан браузером. */
+    margin-left: auto;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-md-4 {
+    width: 33.33333333%;
+    /* Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. */
+    float: left;
+    position: relative; /* relative - Положение элемента устанавливается относительно его исходного места. */
+    min-height: 1px;
+}
+.header ul.left {
+    /* Определяет горизонтальное выравнивание текста в пределах элемента. */
+    text-align: left;
+    margin-left: 50px;
+}
+.header ul.left li, .header ul.right li {
+    /* Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. */
+    display: inline-block;
+    padding: 9px 0;
+    margin-right: 40px;
+    /* Универсальное свойство, позволяющее одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера. */
+    list-style: none;
+}
+.header ul.left li a {
+    color: #26272d;
+    /* Добавляет оформление текста в виде его подчеркивания, перечеркивания, линии над текстом и мигания. */
+    text-decoration: none;
+}
+.header .help {
+    color: rgba(38, 39, 45, 0.4);
+}
+.text-center {
+    text-align: center;
+}
+.logo {
+    display: inline-block;
+    padding-top: 11px;
+}
+.text-center img {
+    /* Выравнивает элемент по вертикали относительно своего родителя, окружающего текста или ячейки таблицы. */
+    vertical-align: middle;
+    /* Универсальное свойство border позволяет одновременно установить толщину, стиль и цвет границы вокруг элемента. */
+    border: 0;
+}
+
+.header ul.right {
+    text-align: right;
+}
+.header .button {
+    background-color: #267df4;
+    color: white;
+    font-size: 16px;
+    /* Устанавливает насыщенность/жирность шрифта. */
+    font-weight: 400;
+    padding: 9px 16px;
+    border: none;
+    /* Устанавливает радиус скругления уголков рамки. */
+    border-radius: 30px;
+}
+.header .button .brand {
+    display: inline;
+    width: 19px;
+    margin-bottom: -3px;
+}
+
+
+.section_header {
+    padding: 200px 0 510px;
+    /* Устанавливает фоновое изображение для элемента. */
+    background-image: url(images/banner_background.jpg);
+    /* Определяет, как будет повторяться фоновое изображение, установленное с помощью свойства background-image. */
+    background-repeat: no-repeat;
+    /* Задает начальное положение фонового изображения, установленного с помощью свойства background-image. */
+    background-position: center center;
+    /* Масштабирует фоновое изображение согласно заданным размерам. */
+    background-size: cover;
+    position: relative;
+    display: block;
+}
+.text-block {
+    margin-left: 16.66666667%;
+
+    width: 66.66666667%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.text-block h1 {
+    font-size: 62px;
+    /* Устанавливает интерлиньяж (межстрочный интервал) текста, отсчет ведется от базовой линии шрифта. */
+    line-height: 72px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text-block p {
+    font-size: 20px;
+    color: #8c8f94;
+}
+
+.text-block .video-btn {
+    display: inline-block;
+    margin-top: 48px;
+    padding: 14px 48px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #26272d;
+    border: 1px solid rgba(38, 39, 45, 0.1);
+    border-radius: 30px;
+}
